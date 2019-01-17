@@ -11,3 +11,4 @@ function createStr(amount) {
 }
 
 export {createStr, x};
+ 
