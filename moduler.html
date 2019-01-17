@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Moduler</title>
+</head>
+<body>
+</body>
+</html>
+<!-- När vi importerar i vanilla JS (dvs utan stöd av ramverk)
+  så behöver vi lägga till type="module" i script-taggen.
+  Dessutom måste vi "serva" filen via en webbserver, eftersom
+  vi annars stöter på CORS-problematik när vi försöker komma åt en
+  lokal fil från en html-fil.
+  Kör kommandot "npm install -g http-server"
+  och gå sedan till den katalog där du har de filer du vill serva,
+  och skriv "http-server", så går den igång och du får en URL.
+-->
+<script type="module">
+  import { createStr, x } from './modules/createStr.js';
+  var str = createStr(8);
+  console.log(str);
+  console.log("x=" + x);
+</script>
